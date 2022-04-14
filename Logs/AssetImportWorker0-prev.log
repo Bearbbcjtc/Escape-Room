@@ -15,12 +15,12 @@ E:/BBStudyUpUp/BoilerUpUp_Purdue/B_CGT516_Unity/Final Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52716
+62914
 Successfully changed project path to: E:/BBStudyUpUp/BoilerUpUp_Purdue/B_CGT516_Unity/Final Project
 E:/BBStudyUpUp/BoilerUpUp_Purdue/B_CGT516_Unity/Final Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 65.14 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.74 ms.
+Refreshing native plugins compatible for Editor in 63.12 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.70 ms.
 Initialize engine version: 2020.3.21f1 (a38c86f6690f)
 [Subsystems] Discovering subsystems at path D:/Program Files/Unity Hub/2020.3.21f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path E:/BBStudyUpUp/BoilerUpUp_Purdue/B_CGT516_Unity/Final Project/Assets
@@ -36,95 +36,95 @@ Initialize mono
 Mono path[0] = 'D:/Program Files/Unity Hub/2020.3.21f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Program Files/Unity Hub/2020.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Program Files/Unity Hub/2020.3.21f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56020
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program Files/Unity Hub/2020.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000670 seconds.
+Registered in 0.000766 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 53.91 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 77.05 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.03 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.140 seconds
+- Completed reload, in  1.243 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1140ms)
-		BeginReloadAssembly (42ms)
+	ReloadAssembly (1243ms)
+		BeginReloadAssembly (40ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (356ms)
-			LoadAssemblies (42ms)
+		EndReloadAssembly (394ms)
+			LoadAssemblies (39ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (112ms)
+			SetupTypeCache (122ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (21ms)
-			SetupLoadedEditorAssemblies (148ms)
+			SetupLoadedEditorAssemblies (176ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (2ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (54ms)
-				BeforeProcessingInitializeOnLoad (13ms)
-				ProcessInitializeOnLoadAttributes (59ms)
-				ProcessInitializeOnLoadMethodAttributes (20ms)
+				RefreshPlugins (77ms)
+				BeforeProcessingInitializeOnLoad (14ms)
+				ProcessInitializeOnLoadAttributes (60ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004554 seconds.
+Registered in 0.004267 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
+Refreshing native plugins compatible for Editor in 0.94 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
 [XR] OculusXRPlugin: registering subsystems
 [XR] Unable to register display lifecyle provider: [1]
 [XR] Oculus Input lifecycle provider registered.
 [XR] Unable to register input lifecyle provider: [1]
 [XR] OVRP version 1.69.0
 Mono: successfully reloaded assembly
-- Completed reload, in  0.847 seconds
+- Completed reload, in  1.001 seconds
 Domain Reload Profiling:
-	ReloadAssembly (848ms)
-		BeginReloadAssembly (102ms)
+	ReloadAssembly (1002ms)
+		BeginReloadAssembly (105ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (704ms)
-			LoadAssemblies (73ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (850ms)
+			LoadAssemblies (78ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (246ms)
+			SetupTypeCache (269ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (50ms)
-			SetupLoadedEditorAssemblies (258ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (305ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (72ms)
-				ProcessInitializeOnLoadAttributes (162ms)
-				ProcessInitializeOnLoadMethodAttributes (17ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (196ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.23 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 0.90 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.04 ms.
 Unloading 2812 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 128.7 MB.
-System memory in use after: 128.9 MB.
+System memory in use before: 128.8 MB.
+System memory in use after: 129.0 MB.
 
 Unloading 52 unused Assets to reduce memory usage. Loaded Objects now: 3222.
-Total: 3.792200 ms (FindLiveObjects: 0.216000 ms CreateObjectMapping: 0.066000 ms MarkObjects: 3.369800 ms  DeleteObjects: 0.138200 ms)
+Total: 2.711500 ms (FindLiveObjects: 0.228300 ms CreateObjectMapping: 0.124300 ms MarkObjects: 2.265100 ms  DeleteObjects: 0.092600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -139,9 +139,49 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/Bibliotheque.FBX
-  artifactKey: Guid(026bca1e10905a54782e59a976ef49c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Bibliotheque.FBX using Guid(026bca1e10905a54782e59a976ef49c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eb77aa82c9861c141d20a07577572ef') in 0.161670 seconds 
-  Import took 0.167163 seconds .
+  path: Assets/Prefabs/Packaging_Bottle.FBX
+  artifactKey: Guid(c59a2a199b3974a4c9509ccec14e4798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Packaging_Bottle.FBX using Guid(c59a2a199b3974a4c9509ccec14e4798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38e957fc8d89a5809a1aab11ebb17fbb') in 0.195408 seconds 
+  Import took 0.199779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Prefabs/pics.fbx
+  artifactKey: Guid(1cd12eb410ca1c145bea45161e6d8368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/pics.fbx using Guid(1cd12eb410ca1c145bea45161e6d8368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2236e7164deca608415ebac80ad7a71') in 0.070540 seconds 
+  Import took 0.074484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Prefabs/Phone_FBX.fbx
+  artifactKey: Guid(c67562eb959629046934bc4e16917075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Phone_FBX.fbx using Guid(c67562eb959629046934bc4e16917075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f4734f105925dd25681254dbaacf6b1') in 0.081006 seconds 
+  Import took 0.084953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Prefabs/not.fbx
+  artifactKey: Guid(08e7e5a0b4e550a4cbded6da7daae407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/not.fbx using Guid(08e7e5a0b4e550a4cbded6da7daae407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca41bd365e678cf556defce3deb0522f') in 0.016487 seconds 
+  Import took 0.020347 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Prefabs/Desk1_Polygon.fbx
+  artifactKey: Guid(7a2ab9617bc0a71429954ffa7b58ffa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Desk1_Polygon.fbx using Guid(7a2ab9617bc0a71429954ffa7b58ffa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c7bf376558eb4872fe97e0a40006c97') in 0.052253 seconds 
+  Import took 0.056338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Prefabs/trash_can.fbx
+  artifactKey: Guid(86277de3dfb1bf4458b60c00aaebbf7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/trash_can.fbx using Guid(86277de3dfb1bf4458b60c00aaebbf7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a869101c44370f3f1a343fd6df272666') in 0.055996 seconds 
+  Import took 0.059512 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

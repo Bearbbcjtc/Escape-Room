@@ -15,12 +15,12 @@ E:/BBStudyUpUp/BoilerUpUp_Purdue/B_CGT516_Unity/Final Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64035
+63005
 Successfully changed project path to: E:/BBStudyUpUp/BoilerUpUp_Purdue/B_CGT516_Unity/Final Project
 E:/BBStudyUpUp/BoilerUpUp_Purdue/B_CGT516_Unity/Final Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 66.65 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.83 ms.
+Refreshing native plugins compatible for Editor in 102.48 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 1.03 ms.
 Initialize engine version: 2020.3.21f1 (a38c86f6690f)
 [Subsystems] Discovering subsystems at path D:/Program Files/Unity Hub/2020.3.21f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path E:/BBStudyUpUp/BoilerUpUp_Purdue/B_CGT516_Unity/Final Project/Assets
@@ -36,95 +36,95 @@ Initialize mono
 Mono path[0] = 'D:/Program Files/Unity Hub/2020.3.21f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Program Files/Unity Hub/2020.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Program Files/Unity Hub/2020.3.21f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56628
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56780
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program Files/Unity Hub/2020.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000872 seconds.
+Registered in 0.000713 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.92 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 81.05 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.05 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.349 seconds
+- Completed reload, in  1.615 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1350ms)
-		BeginReloadAssembly (39ms)
+	ReloadAssembly (1616ms)
+		BeginReloadAssembly (40ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (360ms)
-			LoadAssemblies (38ms)
+		EndReloadAssembly (547ms)
+			LoadAssemblies (40ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (111ms)
+			SetupTypeCache (138ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (152ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (236ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (55ms)
-				BeforeProcessingInitializeOnLoad (13ms)
-				ProcessInitializeOnLoadAttributes (61ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (81ms)
+				BeforeProcessingInitializeOnLoad (14ms)
+				ProcessInitializeOnLoadAttributes (95ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004272 seconds.
+Registered in 0.009221 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 6 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
+Refreshing native plugins compatible for Editor in 0.92 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
 [XR] OculusXRPlugin: registering subsystems
 [XR] Unable to register display lifecyle provider: [1]
 [XR] Oculus Input lifecycle provider registered.
 [XR] Unable to register input lifecyle provider: [1]
 [XR] OVRP version 1.69.0
 Mono: successfully reloaded assembly
-- Completed reload, in  0.853 seconds
+- Completed reload, in  1.232 seconds
 Domain Reload Profiling:
-	ReloadAssembly (854ms)
-		BeginReloadAssembly (103ms)
+	ReloadAssembly (1233ms)
+		BeginReloadAssembly (123ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (708ms)
-			LoadAssemblies (69ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (1069ms)
+			LoadAssemblies (76ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (248ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (47ms)
-			SetupLoadedEditorAssemblies (268ms)
+			SetupTypeCache (329ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (412ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (67ms)
-				ProcessInitializeOnLoadAttributes (179ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
+				BeforeProcessingInitializeOnLoad (104ms)
+				ProcessInitializeOnLoadAttributes (265ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.02 ms, found 6 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 1.12 ms, found 6 plugins.
 Preloading 1 native plugins for Editor in 0.05 ms.
 Unloading 2812 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 128.8 MB.
 System memory in use after: 129.0 MB.
 
 Unloading 52 unused Assets to reduce memory usage. Loaded Objects now: 3222.
-Total: 2.760300 ms (FindLiveObjects: 0.191000 ms CreateObjectMapping: 0.058300 ms MarkObjects: 2.413900 ms  DeleteObjects: 0.095900 ms)
+Total: 2.606300 ms (FindLiveObjects: 0.196600 ms CreateObjectMapping: 0.062900 ms MarkObjects: 2.255400 ms  DeleteObjects: 0.090300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -139,73 +139,41 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/rubbish/rubbish/wet_ash_closeup_4260142.JPG
-  artifactKey: Guid(3462fc2ea0f6e6045aeae5576bd68fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/rubbish/rubbish/wet_ash_closeup_4260142.JPG using Guid(3462fc2ea0f6e6045aeae5576bd68fe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c565d508f8ec17df7d5833f2c8ac392') in 0.083002 seconds 
-  Import took 0.088024 seconds .
+  path: Assets/Prefabs/PhychoZombie/Phychozomb_spec.jpg
+  artifactKey: Guid(a20890d0351133c469c30759b2327b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PhychoZombie/Phychozomb_spec.jpg using Guid(a20890d0351133c469c30759b2327b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f258472474c8bb2f26eb55529ad72648') in 0.124352 seconds 
+  Import took 0.130684 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Prefabs/rubbish
-  artifactKey: Guid(efc605bb9c85dd34c8f6e46310085d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/rubbish using Guid(efc605bb9c85dd34c8f6e46310085d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e1e24a1afc1ee141ade1f848495989') in 0.001516 seconds 
-  Import took 0.005355 seconds .
+  Time since last request: 0.000451 seconds.
+  path: Assets/Prefabs/PhychoZombie/Phychozomb.mb
+  artifactKey: Guid(11dd18496c87d1344bde8e290a64c5b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PhychoZombie/Phychozomb.mb using Guid(11dd18496c87d1344bde8e290a64c5b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c992c3b97aff146d87b0eff591f8361') in 0.448742 seconds 
+  Import took 0.461898 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000194 seconds.
-  path: Assets/Prefabs/rubbish/rubbish/fbx.FBX
-  artifactKey: Guid(f898755107b4fb5419aebd5a2765da39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/rubbish/rubbish/fbx.FBX using Guid(f898755107b4fb5419aebd5a2765da39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ecf6ec35715599f34c7b75263f06fc8') in 0.162481 seconds 
-  Import took 0.166336 seconds .
+  Time since last request: 0.000450 seconds.
+  path: Assets/Prefabs/PhychoZombie/Phychozomb.fbx
+  artifactKey: Guid(0f282dc4596815c498b59e20a9a1b848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PhychoZombie/Phychozomb.fbx using Guid(0f282dc4596815c498b59e20a9a1b848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df915223155d2238845c10e39ec32047') in 0.329270 seconds 
+  Import took 0.335677 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/Prefabs/rubbish/rubbish/walls.png
-  artifactKey: Guid(c9c63f76a454b0647ba5d5d4ddd71a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/rubbish/rubbish/walls.png using Guid(c9c63f76a454b0647ba5d5d4ddd71a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec22c50a1446dc3b2f0d25e9083ffd54') in 0.008022 seconds 
-  Import took 0.012022 seconds .
+  Time since last request: 0.000270 seconds.
+  path: Assets/Prefabs/PhychoZombie/Phychozomb_color.jpg
+  artifactKey: Guid(02960bd83a5b5984abb5606d16aed65a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PhychoZombie/Phychozomb_color.jpg using Guid(02960bd83a5b5984abb5606d16aed65a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a014b47296ad84e20430a5bfd98e27e') in 0.015150 seconds 
+  Import took 0.019386 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/Prefabs/rubbish/rubbish/metal_2030205.JPG
-  artifactKey: Guid(188f1eab54cdd0c45be93bada03742a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/rubbish/rubbish/metal_2030205.JPG using Guid(188f1eab54cdd0c45be93bada03742a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4b74063f54eae9e65951833b5f55e71') in 0.008684 seconds 
-  Import took 0.012741 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000207 seconds.
-  path: Assets/Prefabs/rubbish/rubbish/drink1.jpg
-  artifactKey: Guid(213ccd6baeee97640ba33202ca29af6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/rubbish/rubbish/drink1.jpg using Guid(213ccd6baeee97640ba33202ca29af6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f64d4c57582807df84245fbcee9919a9') in 0.008941 seconds 
-  Import took 0.013238 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/Prefabs/rubbish/rubbish/slightly_peeling_metal_1241065.JPG
-  artifactKey: Guid(6c324045a3ff2df44b2b2612f2aef446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/rubbish/rubbish/slightly_peeling_metal_1241065.JPG using Guid(6c324045a3ff2df44b2b2612f2aef446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '970c5170f1513353c18b351f959d3b85') in 0.005903 seconds 
-  Import took 0.009952 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/Prefabs/rubbish/rubbish
-  artifactKey: Guid(6b5f6c8966919854683f92597ec09462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/rubbish/rubbish using Guid(6b5f6c8966919854683f92597ec09462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba3ac3f0d899933e2e30f9c4672532b5') in 0.001801 seconds 
-  Import took 0.005590 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000176 seconds.
-  path: Assets/Prefabs/rubbish/rubbish/CEDFENCE.JPG
-  artifactKey: Guid(b808ad0c4cdf88446b79f4f62826412c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/rubbish/rubbish/CEDFENCE.JPG using Guid(b808ad0c4cdf88446b79f4f62826412c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d89631633e7a79db8f0398de9fc6794') in 0.006739 seconds 
-  Import took 0.010628 seconds .
+  Time since last request: 0.000380 seconds.
+  path: Assets/Prefabs/PhychoZombie
+  artifactKey: Guid(59a527d78b1e96e4b9d210b1110b23f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PhychoZombie using Guid(59a527d78b1e96e4b9d210b1110b23f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7842e21a3af3b7637639777c408288f') in 0.002636 seconds 
+  Import took 0.007651 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

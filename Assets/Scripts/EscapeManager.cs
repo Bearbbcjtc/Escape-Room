@@ -22,6 +22,9 @@ public class EscapeManager : MonoBehaviour
     private int currentItemId = -1;
     public InfoBoard board;
 
+    private float timeRemaining = -1.0f;
+    public Clock clock;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,8 +40,17 @@ public class EscapeManager : MonoBehaviour
             {
                 localRole = PhotonNetwork.LocalPlayer.ActorNumber;
                 showRole = true;
+
+                if (PhotonNetwork.LocalPlayer.IsMasterClient)
+                {
+                    timeRemaining = 600.0f;
+                    clock.SetTime(timeRemaining);
+                }
             }
         }
+
+        timeRemaining = clock.GetTime();
+        Debug.Log(timeRemaining);
 
         if (showInfo || showRole)
             canvas.enabled = true;

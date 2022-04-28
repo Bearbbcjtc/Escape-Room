@@ -8,13 +8,12 @@ using TMPro;
 
 public class InfoBoard : MonoBehaviour
 {
-    public TMP_Text boardText;
     private string boardInfo = "";
 
     // Start is called before the first frame update
     void Start()
     {
-        boardInfo = boardText.text;
+        boardInfo = GetComponent<TMP_Text>().text;
     }
 
     // Update is called once per frame
@@ -26,12 +25,12 @@ public class InfoBoard : MonoBehaviour
     public void UpdateInfo(string info)
     {
         boardInfo += info;
-        GetComponent<PhotonView>().RPC("SyncInfo", RpcTarget.All);
+        GetComponent<PhotonView>().RPC("SyncInfo", RpcTarget.All, boardInfo);
     }
 
     [PunRPC]
-    public void SyncInfo()
+    public void SyncInfo(string info)
     {
-        GetComponent<TMP_Text>().text = boardInfo;
+        GetComponent<TMP_Text>().text = info;
     }
 }

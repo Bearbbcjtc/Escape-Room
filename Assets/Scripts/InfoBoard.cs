@@ -32,6 +32,6 @@ public class InfoBoard : MonoBehaviour
     [PunRPC]
     public void SyncInfo()
     {
-        boardText.text = boardInfo;
+        GetComponent<TMP_Text>().text = boardInfo;
     }
 }

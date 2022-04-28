@@ -1408,6 +1408,8 @@ GameObject:
   - component: {fileID: 1031250657}
   - component: {fileID: 1031250656}
   - component: {fileID: 1031250655}
+  - component: {fileID: 1031250659}
+  - component: {fileID: 1031250658}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1555,18 +1557,53 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031250654}
-  m_LocalRotation: {x: 0.50000006, y: -0.49999997, z: -0.50000006, w: 0.49999997}
-  m_LocalPosition: {x: 0, y: 0, z: 0.032221235}
-  m_LocalScale: {x: 0.7989008, y: 1.7511723, z: 4.9920154}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -1.17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5680519943907361270}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.84509516, y: -0.0005648136}
+  m_AnchoredPosition: {x: -3.55, y: 2.4099996}
   m_SizeDelta: {x: 2.1, y: 0.8}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1031250658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031250654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc1b83ea4478b7419aab67a16bf85e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boardText: {fileID: 1031250655}
+--- !u!114 &1031250659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031250654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1049291827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,7 +1851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   networkManager: {fileID: 1246762875}
   canvas: {fileID: 1445432884}
-  board: {fileID: 8416272008468627499}
+  board: {fileID: 1031250658}
 --- !u!1 &1326420867
 GameObject:
   m_ObjectHideFlags: 0
@@ -16548,8 +16585,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -25.674, y: 9.2708, z: -3.9587}
   m_LocalScale: {x: 0.667733, y: 4.1724005, z: 1.903487}
-  m_Children:
-  - {fileID: 1031250657}
+  m_Children: []
   m_Father: {fileID: 543450653158647332}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23611,8 +23647,6 @@ GameObject:
   - component: {fileID: 5680519943907361270}
   - component: {fileID: 3010172806314110495}
   - component: {fileID: 8544783548006409730}
-  - component: {fileID: 8416272008468627500}
-  - component: {fileID: 8416272008468627499}
   m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
@@ -23620,41 +23654,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8416272008468627499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8416272008468627498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fc1b83ea4478b7419aab67a16bf85e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boardText: {fileID: 1031250655}
---- !u!114 &8416272008468627500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8416272008468627498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 1
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!33 &8421633154964376472
 MeshFilter:
   m_ObjectHideFlags: 0

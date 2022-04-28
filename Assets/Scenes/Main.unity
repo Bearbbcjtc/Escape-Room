@@ -1504,6 +1504,7 @@ GameObject:
   - component: {fileID: 1246762876}
   - component: {fileID: 1246762875}
   - component: {fileID: 1246762877}
+  - component: {fileID: 1246762878}
   m_Layer: 0
   m_Name: Network Manager
   m_TagString: Untagged
@@ -1520,7 +1521,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1246762874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87a69708caab2dc49a32e7690870b112, type: 3}
+  m_Script: {fileID: 11500000, guid: f662473f8c1505a449b5ee840d991a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1246762876
@@ -1549,6 +1550,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7df3bdb14a7c3243ab75297ac4a658b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1246762878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246762874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa0c5d5acc97dd4782c934808646715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkManager: {fileID: 1246762875}
 --- !u!1 &1326420867
 GameObject:
   m_ObjectHideFlags: 0
@@ -10150,6 +10164,8 @@ GameObject:
   - component: {fileID: 1549528955068030798}
   - component: {fileID: 2048318487389657291}
   - component: {fileID: 6170381734577029565}
+  - component: {fileID: 3176557524370856341}
+  - component: {fileID: 3176557524370856340}
   m_Layer: 0
   m_Name: Box003
   m_TagString: Untagged
@@ -10157,6 +10173,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3176557524370856340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3176557524370856339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae63592a8857dc439d7058d1ef1b25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3176557524370856341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3176557524370856339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &3184586771317505810
 Transform:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ using Photon.Realtime;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    private bool isInARoom = false;
+
     private void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
@@ -32,12 +34,18 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
-        PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = 5 });
+        PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = 4 });
         Debug.Log("Created Room");
     }
 
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined Room");
+        isInARoom = true;
+    }
+
+    public bool IsInARoom()
+    {
+        return isInARoom;
     }
 }

@@ -17,8 +17,11 @@ public class Clock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timeRemaining > 0.0f)
-            timeRemaining -= Time.deltaTime;
+        if (PhotonNetwork.LocalPlayer.IsMasterClient && timeRemaining > 0.0f)
+        {
+            float time = timeRemaining - Time.deltaTime;
+            GetComponent<PhotonView>().RPC("SyncTime", RpcTarget.All, time);
+        }
     }
 
     public float GetTime()

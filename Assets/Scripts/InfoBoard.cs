@@ -31,14 +31,14 @@ public class InfoBoard : MonoBehaviour
 
     public void UpdateInfo(string info)
     {
-        boardInfo += info;
-        GetComponent<PhotonView>().RPC("SyncInfo", RpcTarget.All, boardInfo);
+        GetComponent<PhotonView>().RPC("SyncInfo", RpcTarget.All, info);
     }
 
     [PunRPC]
     public void SyncInfo(string info)
     {
-        GetComponent<TMP_Text>().text = info;
+        boardInfo += info;
+        GetComponent<TMP_Text>().text = boardInfo;
         foundCount++;
     }
 

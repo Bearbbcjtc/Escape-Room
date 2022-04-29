@@ -13,8 +13,8 @@ public class EscapeManager : MonoBehaviour
     private bool showInfo = false;
 
     private const int ROLE_MOTHER = 1;
-    private const int ROLE_DETECTIVE = 2;
-    private const int ROLE_GIRLFRIEND = 3;
+    private const int ROLE_GIRLFRIEND = 2;
+    private const int ROLE_DETECTIVE = 3;
     private const int ROLE_CLASSMATE = 4;
 
     private const int ITEM_COFFEE = 1;
@@ -53,7 +53,9 @@ public class EscapeManager : MonoBehaviour
             return;
         }
 
-        if ((timeRemaining > 0.0f && timeRemaining < timeTotal * 0.4f) || board.GetFoundCount() >= 6)
+        int foundCount = board.GetFoundCount();
+        Debug.Log(foundCount);
+        if ((timeRemaining > 0.0f && timeRemaining < timeTotal * 0.4f) || foundCount >= 6)
         {
             string text;
             // VOTE RESULT
@@ -137,14 +139,14 @@ public class EscapeManager : MonoBehaviour
                 sprite = Resources.Load<Sprite>("Katerina");
                 text += "Katerina\nRole Description: Although you appear to be a good mother to David, few people are aware that you are his stepmother. The main conflict you have with David is that is that he owns all of the family's property and has stated that he would not divide it with you. That's why you decided to murder him for the sake of the family's money. You poisoned everyone's coffee through the coffee machine, and then you put the antidote in the cake when you cut it in the kitchen. Everyone had the cake except David because you know he does not eat any desserts. That was how you conducted the murder successfully.\nSkills: Any clue you find, you can choose to hide it, and the other players will never know who does that. And you are the only player who can lie during the game.";
             }
-            else if (localRole == ROLE_DETECTIVE)
-            {
-                sprite = Resources.Load<Sprite>("Detective");
-                text += "Parva\nRole Description: You are David's girlfriend. However, you two had recently been having a bad relationship because he wanted to break up with you while you refused. You two had a heated argument last night. You texted him, threatening to kill him if he broke up with you. You were just trying to scare him in this way. On the day of the murder, you offered the coffee to everyone using the coffee machine, and also delivered the cake to all the people except David, because you know he doesn't enjoy any dessert.\nSkills: What happened to David is unknown to you. You have the option of telling the facts you know, but you are not permitted to lie in the game.";
-            }
             else if (localRole == ROLE_GIRLFRIEND)
             {
                 sprite = Resources.Load<Sprite>("Parva");
+                text += "Parva\nRole Description: You are David's girlfriend. However, you two had recently been having a bad relationship because he wanted to break up with you while you refused. You two had a heated argument last night. You texted him, threatening to kill him if he broke up with you. You were just trying to scare him in this way. On the day of the murder, you offered the coffee to everyone using the coffee machine, and also delivered the cake to all the people except David, because you know he doesn't enjoy any dessert.\nSkills: What happened to David is unknown to you. You have the option of telling the facts you know, but you are not permitted to lie in the game.";
+            }
+            else if (localRole == ROLE_DETECTIVE)
+            {
+                sprite = Resources.Load<Sprite>("Detective");
                 text += "Detective\nRole Description: You are David's friend, as well as a detective. You are the only one in the game who should not be suspected. Your job is to decide who the murderer is based on your own and other players' opinions. The decision you make will lead to the result if you guys can escape the room.\nSkills: You declare your role at the beginning of the game and make the final decision in the voting part.";
             }
             else if (localRole == ROLE_CLASSMATE)
@@ -227,7 +229,7 @@ public class EscapeManager : MonoBehaviour
         else if (itemId == ITEM_PHONE)
         {
             sprite = Resources.Load<Sprite>("phone");
-            info = "David¡¯s smart phone\nCongratulations! You find a message in David¡¯s smart phone. The text shows:\nDavid: ¡°I¡¯m done with you¡±\nDavid: ¡°I¡¯m breaking up with you¡±\nDavid: ¡°Is what I¡¯m doing¡±\nParva: ¡°No way¡±\nParva: ¡°How dare you¡­ I will kill you if you do so!!¡±\nDavid: ¡°LET ME BREAK UP WITH YOU¡±\nParva: ¡°LET ME KILL YOU THEN¡±";
+            info = "David¡¯s smart phone\nCongratulations! You find a message in David¡¯s smart phone.";
         }
         else if (itemId == ITEM_DEBT)
         {

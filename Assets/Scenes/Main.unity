@@ -1788,6 +1788,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc1b83ea4478b7419aab67a16bf85e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  voteCountMother: 0
+  voteCountGirlFriend: 0
+  voteCountClassmate: 0
+  voteCountDetective: 0
+  voteTotal: 0
 --- !u!114 &1031250659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1803,7 +1808,7 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
+  Synchronization: 2
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []

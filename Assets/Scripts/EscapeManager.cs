@@ -30,6 +30,7 @@ public class EscapeManager : MonoBehaviour
     public InfoBoard board;
 
     private float timeRemaining = -1.0f;
+    private const float timeTotal = 600.0f;
     public Clock clock;
 
     // Start is called before the first frame update
@@ -42,12 +43,68 @@ public class EscapeManager : MonoBehaviour
     void Update()
     {
         timeRemaining = clock.GetTime();
+
         if (timeRemaining <= 0.0f && timeRemaining != -1.0f)
         {
             string text = "Time's up!";
             canvas.transform.GetChild(1).GetComponent<Text>().text = text;
             canvas.transform.GetChild(2).gameObject.SetActive(false);
             canvas.enabled = true;
+            return;
+        }
+
+        if ((timeRemaining > 0.0f && timeRemaining < timeTotal * 0.4f) || board.GetFoundCount() >= 6)
+        {
+            string text;
+            // VOTE RESULT
+            if (board.voteTotal >= 4)
+            {
+                text = "Voting Result:\n";
+                text += "¡°Katerina¡±: ";
+                text += board.voteCountMother + " votes\n";
+                text += "¡°Parva¡±: ";
+                text += board.voteCountGirlFriend + " votes\n";
+                text += "¡°Christian¡±: ";
+                text += board.voteCountClassmate + " votes\n";
+                text += "¡°Detective¡±: ";
+                text += board.voteCountDetective + " votes";
+
+                if (localRole == ROLE_DETECTIVE)
+                {
+                    text += "\n\nAs a detective, it¡¯s your responsibility to make the final decision. Who is the murderer?\n";
+                    text += "Press A vote for ¡°Katerina¡±\nPress B vote for ¡°Parva¡±\nPress X vote for ¡°Christian¡±\nPress Y vote for ¡°Detective¡±";
+                }
+
+                canvas.transform.GetChild(1).GetComponent<Text>().text = text;
+                canvas.transform.GetChild(2).gameObject.SetActive(false);
+                canvas.enabled = true;
+
+                return;
+            }
+
+            // VOTING
+            text = "Please vote out the murder:\nPress A vote for ¡°Katerina¡±\nPress B vote for ¡°Parva¡±\nPress X vote for ¡°Christian¡±\nPress Y vote for ¡°Detective¡±";
+            canvas.transform.GetChild(1).GetComponent<Text>().text = text;
+            canvas.transform.GetChild(2).gameObject.SetActive(false);
+            canvas.enabled = true;
+
+            if (OVRInput.GetDown(OVRInput.Button.One))
+            {
+                board.VoteMother();
+            }
+            else if (OVRInput.GetDown(OVRInput.Button.Two))
+            {
+                board.VoteGirlFriend();
+            }
+            else if (OVRInput.GetDown(OVRInput.Button.Three))
+            {
+                board.VoteClassmate();
+            }
+            else if (OVRInput.GetDown(OVRInput.Button.Four))
+            {
+                board.VoteDetective();
+            }
+
             return;
         }
 
@@ -60,7 +117,7 @@ public class EscapeManager : MonoBehaviour
 
                 if (PhotonNetwork.LocalPlayer.IsMasterClient)
                 {
-                    timeRemaining = 600.0f;
+                    timeRemaining = timeTotal;
                     clock.SetTime(timeRemaining);
                 }
             }

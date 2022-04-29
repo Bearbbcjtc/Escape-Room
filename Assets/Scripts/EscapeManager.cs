@@ -227,27 +227,27 @@ public class EscapeManager : MonoBehaviour
                 string boardInfo = "\n";
                 if (currentItemId == ITEM_COFFEE)
                 {
-                    boardInfo += "Coffee machine";
+                    boardInfo += "°ÒPoison 516 residues are discovered in the coffee machine, which indicates the reason for David's death.";
                 }
                 else if (currentItemId == ITEM_PROPERTY)
                 {
-                    boardInfo += "Property Contract";
+                    boardInfo += "°ÒDavid owns all the family°Øs property, and it will not be given to anyone without blood relationship.";
                 }
                 else if (currentItemId == ITEM_BOTTLE)
                 {
-                    boardInfo += "Antidote bottle";
+                    boardInfo += "°ÒAntidote bottle found in the dustbin can detoxify the poison 516.";
                 }
                 else if (currentItemId == ITEM_PHONE)
                 {
-                    boardInfo += "David°Øs smart phone";
+                    boardInfo += "°ÒParva texted David that she would kill him if he broke up with her.";
                 }
                 else if (currentItemId == ITEM_DEBT)
                 {
-                    boardInfo += "Debt contract";
+                    boardInfo += "°ÒChristian owed David $30,000 for his pharmacy degree tuition. Two days later will be the payment deadline";
                 }
                 else if (currentItemId == ITEM_PHOTO)
                 {
-                    boardInfo += "David°Øs childhood photo";
+                    boardInfo += "°ÒDavid does not eat any dessert. Katerina is his stepmother.";
                 }
 
                 board.UpdateInfo(boardInfo);

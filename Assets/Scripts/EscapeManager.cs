@@ -33,6 +33,9 @@ public class EscapeManager : MonoBehaviour
     private const float timeTotal = 600.0f;
     public Clock clock;
 
+    private bool voted = false;
+    private int voteId = -1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,13 +56,11 @@ public class EscapeManager : MonoBehaviour
             return;
         }
 
-        int foundCount = board.GetFoundCount();
-        Debug.Log(foundCount);
-        if ((timeRemaining > 0.0f && timeRemaining < timeTotal * 0.4f) || foundCount >= 6)
+        if ((timeRemaining > 0.0f && timeRemaining < timeTotal * 0.4f) || board.GetFoundCount() >= 6)
         {
-            string text;
+            string text = "";
             // VOTE RESULT
-            if (board.voteTotal >= 4)
+            if (board.voteTotal >= 2)
             {
                 text = "Voting Result:\n";
                 text += "¡°Katerina¡±: ";
@@ -79,33 +80,52 @@ public class EscapeManager : MonoBehaviour
 
                 canvas.transform.GetChild(1).GetComponent<Text>().text = text;
                 canvas.transform.GetChild(2).gameObject.SetActive(false);
-                canvas.enabled = true;
+                canvas.gameObject.SetActive(true);
 
                 return;
             }
 
             // VOTING
-            text = "Please vote out the murder:\nPress A vote for ¡°Katerina¡±\nPress B vote for ¡°Parva¡±\nPress X vote for ¡°Christian¡±\nPress Y vote for ¡°Detective¡±";
+            if (voteId == -1)
+            {
+                text = "Please vote out the murder:\nPress A vote for ¡°Katerina¡±\nPress B vote for ¡°Parva¡±\nPress X vote for ¡°Christian¡±\nPress Y vote for ¡°Detective¡±";
+
+                if (OVRInput.GetDown(OVRInput.Button.One))
+                {
+                    board.VoteMother();
+                    voteId = 1;
+                }
+                else if (OVRInput.GetDown(OVRInput.Button.Two))
+                {
+                    board.VoteGirlFriend();
+                    voteId = 2;
+                }
+                else if (OVRInput.GetDown(OVRInput.Button.Three))
+                {
+                    board.VoteClassmate();
+                    voteId = 3;
+                }
+                else if (OVRInput.GetDown(OVRInput.Button.Four))
+                {
+                    board.VoteDetective();
+                    voteId = 4;
+                }
+            }
+            else
+            {
+                if (voteId == 1)
+                    text = "You voted for ¡°Katerina¡±";
+                else if (voteId == 2)
+                    text = "You voted for ¡°Parva¡±";
+                else if (voteId == 3)
+                    text = "You voted for ¡°Christian¡±";
+                else if (voteId == 4)
+                    text = "You voted for ¡°Detective¡±";
+            }
+
             canvas.transform.GetChild(1).GetComponent<Text>().text = text;
             canvas.transform.GetChild(2).gameObject.SetActive(false);
-            canvas.enabled = true;
-
-            if (OVRInput.GetDown(OVRInput.Button.One))
-            {
-                board.VoteMother();
-            }
-            else if (OVRInput.GetDown(OVRInput.Button.Two))
-            {
-                board.VoteGirlFriend();
-            }
-            else if (OVRInput.GetDown(OVRInput.Button.Three))
-            {
-                board.VoteClassmate();
-            }
-            else if (OVRInput.GetDown(OVRInput.Button.Four))
-            {
-                board.VoteDetective();
-            }
+            canvas.gameObject.SetActive(true);
 
             return;
         }
@@ -214,7 +234,7 @@ public class EscapeManager : MonoBehaviour
         if (itemId == ITEM_COFFEE)
         {
             sprite = Resources.Load<Sprite>("coffee");
-            info = "Coffee machine\nCongratulations! You find some poison residues in the coffee machine, which indicates the reason for David's death.";
+            info = "Coffee machine\nCongratulations! You find some poison 516 residues in the coffee machine, which indicates the reason for David's death.";
         }
         else if (itemId == ITEM_PROPERTY)
         {

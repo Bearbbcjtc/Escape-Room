@@ -17,6 +17,8 @@ public class InfoBoard : MonoBehaviour
     public int voteCountDetective = 0;
     public int voteTotal = 0;
 
+    public int decision = -1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +69,11 @@ public class InfoBoard : MonoBehaviour
         GetComponent<PhotonView>().RPC("SyncVoteDetective", RpcTarget.All);
     }
 
+    public void Decide(int id)
+    {
+        GetComponent<PhotonView>().RPC("SyncDecide", RpcTarget.All, id);
+    }
+
     [PunRPC]
     public void SyncVoteMother()
     {
@@ -93,5 +100,11 @@ public class InfoBoard : MonoBehaviour
     {
         voteCountDetective++;
         voteTotal++;
+    }
+
+    [PunRPC]
+    public void SyncDecide(int id)
+    {
+        decision = id;
     }
 }

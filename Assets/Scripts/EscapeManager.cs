@@ -45,11 +45,30 @@ public class EscapeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int decision = board.decision;
+        if (decision != -1)
+        {
+            string text = "";
+            if (decision == 1)
+                text = "Congratulations!\nDetective votes ¡°Katerina¡± as the murderer, she is the murderer!\nYou guys escape the room successfully!";
+            else if (decision == 2)
+                text = "Game over!\nDetective votes ¡°Parva¡± as the murderer, she is not the murderer!\nYou guys fail to escape the room!";
+            else if (decision == 3)
+                text = "Game over!\nDetective votes ¡°Christian¡± as the murderer, she is not the murderer!\nYou guys fail to escape the room!";
+            else if (decision == 4)
+                text = "Game over!\nDetective votes himself as the murderer, he is not the murderer!\nYou guys fail to escape the room!";
+
+            canvas.transform.GetChild(1).GetComponent<Text>().text = text;
+            canvas.transform.GetChild(2).gameObject.SetActive(false);
+            canvas.gameObject.SetActive(true);
+            return;
+        }
+
         timeRemaining = clock.GetTime();
 
         if (timeRemaining <= 0.0f && timeRemaining != -1.0f)
         {
-            string text = "Time's up!";
+            string text = "Time's up!\nYou guys fail to escape the room!";
             canvas.transform.GetChild(1).GetComponent<Text>().text = text;
             canvas.transform.GetChild(2).gameObject.SetActive(false);
             canvas.enabled = true;
@@ -72,10 +91,28 @@ public class EscapeManager : MonoBehaviour
                 text += "¡°Detective¡±: ";
                 text += board.voteCountDetective + " votes";
 
+                // FINAL DECISION
                 if (localRole == ROLE_DETECTIVE)
                 {
                     text += "\n\nAs a detective, it¡¯s your responsibility to make the final decision. Who is the murderer?\n";
-                    text += "Press A vote for ¡°Katerina¡±\nPress B vote for ¡°Parva¡±\nPress X vote for ¡°Christian¡±\nPress Y vote for ¡°Detective¡±";
+                    text += "Press A to vote for ¡°Katerina¡±\nPress B to vote for ¡°Parva¡±\nPress X to vote for ¡°Christian¡±\nPress Y to vote for ¡°Detective¡±";
+
+                    if (OVRInput.GetDown(OVRInput.Button.One))
+                    {
+                        board.Decide(1);
+                    }
+                    else if (OVRInput.GetDown(OVRInput.Button.Two))
+                    {
+                        board.Decide(2);
+                    }
+                    else if (OVRInput.GetDown(OVRInput.Button.Three))
+                    {
+                        board.Decide(3);
+                    }
+                    else if (OVRInput.GetDown(OVRInput.Button.Four))
+                    {
+                        board.Decide(4);
+                    }
                 }
 
                 canvas.transform.GetChild(1).GetComponent<Text>().text = text;
@@ -88,7 +125,7 @@ public class EscapeManager : MonoBehaviour
             // VOTING
             if (voteId == -1)
             {
-                text = "Please vote out the murder:\nPress A vote for ¡°Katerina¡±\nPress B vote for ¡°Parva¡±\nPress X vote for ¡°Christian¡±\nPress Y vote for ¡°Detective¡±";
+                text = "Please vote out the murderer:\nPress A to vote for ¡°Katerina¡±\nPress B to vote for ¡°Parva¡±\nPress X to vote for ¡°Christian¡±\nPress Y to vote for ¡°Detective¡±";
 
                 if (OVRInput.GetDown(OVRInput.Button.One))
                 {
